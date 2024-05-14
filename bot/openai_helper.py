@@ -66,7 +66,7 @@ def are_functions_available(model: str) -> bool:
         return datetime.date.today() > datetime.date(2024, 5, 13)
     # Stable models will be updated to support functions on June 27, 2023
     if model in ("gpt-3.5-turbo", "gpt-3.5-turbo-1106", "gpt-4", "gpt-4-32k","gpt-4-1106-preview","gpt-4-0125-preview","gpt-4-turbo-preview"):
-        return datetime.date.today() > datetime.date(2023, 6, 27)
+        return datetime.date.today() < datetime.date(2023, 6, 27)
     # Models gpt-3.5-turbo-0613 and  gpt-3.5-turbo-16k-0613 will be deprecated on June 13, 2024
     if model in ("gpt-3.5-turbo-0613", "gpt-3.5-turbo-16k-0613"):
         return datetime.date.today() < datetime.date(2024, 6, 13)
